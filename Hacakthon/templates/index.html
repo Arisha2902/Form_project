@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 12px;
 }
 
 
@@ -24,10 +25,10 @@
   
   }
   .navbar .nav-item .nav-link:active{
-    color: #e53b44 !important;
+    color:#fe5f14 !important;
   }
   .nav-link.active {
-    color: #e53b44 !important;
+    color:#fe5f14 !important;
     /* color: #fc6016 !important; */
 }
 
@@ -37,7 +38,7 @@
   }
   .blink {
     animation: blinker 1.5s linear infinite;
-    color: rgb(254, 18, 18);
+    color:#fe5f14;
     font-family: sans-serif;
     height: 50%;
     background: transparent;
@@ -59,7 +60,7 @@
   color:rgb(14, 16, 18);
   background-color: white;
   border-radius: 8px;
-  border: 5px solid  black;
+  
     /* justify-content: space-between; */
 }
   .section {
@@ -76,14 +77,22 @@
   background-color:  #F44336;
   color: white !important;
   }
+  #data{
+    justify-content: space-between;
+  }
   #aidata{
     float: right;
-    width: 30%;
+    width: 28%;
     /* align-items: vertical; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid black;
+    padding: 10px;
+    background: #fe5f14;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    
 }
   #Do{
     float: left;
@@ -91,12 +100,48 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid black;
+    padding: 10px;
+    background: #f6f6f6;
+    border-radius: 12px;
+    border: 2px solid #fe5f14;
+
   }
-  
+  #or{
+    color: #fe5f14;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #form{
+    background: #f6f6f6;
+  }
   #earthquake , #flood{ 
     font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;;
     line-height: 1.2;  
+    justify-content: space-between;
+    /* border: 2px solid #fe5f14; */
+  }
+  #be{
+    float: right;
+    width: 48%;
+    background: #f6f6f6;
+    border: 2px solid #fe5f14;
+    padding: 10px;
+  }
+  #ae{
+    float: left;
+    width: 48%;
+    background: #f6f6f6;
+    border: 2px solid #fe5f14;
+    padding: 10px;
+
+  }
+  #de{
+    margin-top: 10px;
+    clear: both;
+  width: 100%;
+  background: #fe5f14;
+    padding: 10px;
+
   }
   h1{
     margin-bottom: 1.25rem;
@@ -117,6 +162,13 @@
 image-rendering: -webkit-optimize-contrast;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
+  }
+  label{
+    color: #fe5f14;
+  }
+  .btn{
+    background: #fe5f14 !important;
+    color: white !important;
   }
  
 </style>
@@ -213,7 +265,7 @@ image-rendering: pixelated;
         enter pincode to get data
     </div>
     <div  id="Do">
-         <h2>Some Do's and Don'ts</h2>
+         <h2 id="or">Some Do's and Don'ts</h2>
          <p>
           Some important Do's and Don'ts during an earthquake include,I will update this
          </p>
@@ -229,7 +281,7 @@ image-rendering: pixelated;
       <br><br>
       <label for="Email" class="form-label">Email address</label>
       <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="name@example.com">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <div id="emailHelp"  class="form-text">We'll never share your email with anyone else.</div>
       <br><br>
 
            <label for="phone">Phone Number:</label>
@@ -238,18 +290,22 @@ image-rendering: pixelated;
           <br><br>
           <label for="pincode" class="form-label">Pincode</label>
           <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter your area pincode" maxlength="6" pattern="[0-9]{6}" required>
-          <div class="form-text">Enter a 6-digit postal code.</div>
+          <div class="form-text" Enter a 6-digit postal code.</div>
           <br><br>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn ">Submit</button>
         </form>
   </div>
+</div>
   
   <!-- dropdown -->
   <div class="container" id="Dropdown">
-  <div class="container"  id="earthquake">      
+  <div class="container"  id="earthquake">  
     <h2>
       What Should I Do Before, During, and After an <b>Earthquake </b> ?
+      <hr style="color: #fe5f14; height: 10px; width: 100%; border-radius: 5px; margin-top: 0.5rem; margin-bottom: 0.5rem;">
   </h2>
+  <div id="be">  
+
     <h3>
       What to Do before an Earthquake ?
     </h3>
@@ -261,16 +317,8 @@ image-rendering: pixelated;
       <li>Fix any defective electrical wiring and leakage in the gas connection to prevent the risk of fire. Also, tightly bolt your house's water heaters and LPG cylinders to the walls.</li>
       <li>Anchor heavy furniture, cupboards, and appliances to the walls or floor and Learn the earthquake plan at your school or workplace</li>
     </ul>
-    <h3>
-      What to Do During an Earthquake ?
-    </h3>
-    <ul>
-      <li><b>Stay calm!</b>  If you're indoors, stay inside. If you're outside, stay outside.        </li>        
-      <li>If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors. </li>
-      <li>If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings (stuff might fall off the building or the building could fall on you).</li>
-      <li>If you're in a car, stop the car and stay inside the car until the earthquake stops.        </li>
-      <li>Don't use elevators (they may shut down).</li>
-    </ul>
+  </div> 
+  <div id="ae"> 
     <h3>
       What to Do After an Earthquake ?
     </h3> 
@@ -282,7 +330,20 @@ image-rendering: pixelated;
       <li>Stay away from damaged areas.</li>
       <li>If you're at school or work, follow the emergency plan or the instructions of the person in charge. Expect aftershocks.</li>
     </ul>
-       
+  </div>    
+  <div id="de">  
+    <h3>
+      What to Do During an Earthquake ?
+    </h3>
+    <ul>
+      <li><b>Stay calm!</b>  If you're indoors, stay inside. If you're outside, stay outside.        </li>        
+      <li>If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors. </li>
+      <li>If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings (stuff might fall off the building or the building could fall on you).</li>
+      <li>If you're in a car, stop the car and stay inside the car until the earthquake stops.        </li>
+      <li>Don't use elevators (they may shut down).</li>
+    </ul>
+  </div> 
+    
     </div>
     <div class="container" id="flood">    
           <h2>
@@ -388,7 +449,7 @@ image-rendering: pixelated;
       <a class="text-white" href="https://mdbootstrap.com/"
          >MDBootstrap.com</a
         >
-    </div>
+   
   </footer> 
   
 
