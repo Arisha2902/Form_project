@@ -5,7 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+  .navbar{
+   
+    background: #171717;
+   
+  }
+  .nav-link{
+    color: white !important;
+  
+  }
+  .navbar .nav-item .nav-link:active{
+    color: #e53b44 !important;
+  }
+  .nav-link.active {
+    color: #e53b44 !important;
+    /* color: #fc6016 !important; */
+}
+
   .carousel-item img {
     height: 500px; 
     object-fit: cover; 
@@ -15,6 +43,7 @@
     color: rgb(254, 18, 18);
     font-family: sans-serif;
     height: 50%;
+    background: transparent;
   }
  @keyframes blinker {
     50% {
@@ -68,7 +97,7 @@
     border: 2px solid black;
   }
   
-  #earthquake , #flood{
+  #earthquake , #flood{ 
     font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;;
     line-height: 1.2;  
   }
@@ -92,38 +121,24 @@ image-rendering: -webkit-optimize-contrast;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
   }
-  .captcha {
-      font-weight: bold;
-      font-size: 24px;
-      letter-spacing: 3px;
-      background-color: #e0e0e0;
-      padding: 10px;
-      display: inline-block;
-      user-select: none;
-      margin-bottom: 10px;
-    }
-    .success {
-      color: green;
-    }
-    .error {
-      color: red;
-    }
+ 
+ 
 </style>
-
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
-
-<body> 
-
-
-  <nav class="navbar  sticky-top navbar-expand-lg bg-body-tertiary" >
+<!-- <body>  -->
+  <body data-bs-spy="scroll" data-bs-target="#navbarTogglerDemo02" data-bs-offset="100">
+   <!-- navbar -->
+  <nav class="navbar  sticky-top navbar-expand-lg" >
+    
     <div class="container-fluid">
+      <!-- <a class="navbar-brand " href="#">
+        <img src="./static/ex.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top bg-white text-white">
+          <span class="text-white">Alertnexa</span> -->
       <a class="navbar-brand" href="#">
-        <img src="./static/ex.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-        Bootstrap
+        <img src="./static/exx.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top bg-white">
+        <span class="text-white">Alertnexa</span>
+        <!-- Bootstrap -->
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler bg-white " type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -143,7 +158,7 @@ image-rendering: pixelated;
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#earthquake">Action</a></li>
-              <li><a class="dropdown-item" href="# flood">Another action</a></li>
+              <li><a class="dropdown-item" href="#flood">Another action</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -154,27 +169,29 @@ image-rendering: pixelated;
     </div>
   </nav>
 
-  <div class="bg-primary">
+    <!-- marquee -->
+  <div class="bg-primary bg-transparent">
     <marquee class="blink"  >
-      Emergency helpline no.    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Some one-liner dos during earthquake
+      Emergency helpline no.    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  During an Earthquake ,If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors.   &nbsp; &nbsp; &nbsp; &nbsp;  If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings (stuff might fall off the building or the building could fall on you).  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; uring a flood, prioritize safety by moving to higher ground, avoiding floodwaters, and turning off utilities if safe to do so. Evacuate if ordered and heed warnings from authorities. Do not walk, swim, or drive through floodwaters. 
+
     </marquee>
   </div>
 
-
+      <!-- carousel -->
   <div class="container-fi1980 " id="home">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./static/e1.jpg" class="d-block w-100" alt="...">
+            <img src="./static/flood.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./static/e2.jpg" class="d-block w-100" alt="...">
+            <img src="./static/earth.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./static/f1.jpg" class="d-block w-100" alt="...">
+            <img src="./static/earth2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./static/f2.jpg" class="d-block w-100" alt="...">
+            <img src="./static/storm.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -190,7 +207,7 @@ image-rendering: pixelated;
 
       
 
-
+  <!-- data -->
   <div class="container" id="data">
     <div id="aidata">
         <h2>Ai Data</h2>
@@ -205,7 +222,7 @@ image-rendering: pixelated;
     </div>  
   </div>
 
-
+  <!-- form -->
   <div class="container" id="form">
     <form >
       <label for="Name" class="col-sm-2 col-form-label">Name</label>
@@ -224,20 +241,11 @@ image-rendering: pixelated;
           <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter your area pincode" maxlength="6" pattern="[0-9]{6}" required>
           <div class="form-text">Enter a 6-digit postal code.</div>
           <br><br>
-       
-  <div class="captcha" id="captchaDisplay"></div>
-  <br>   
-  <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
-  <button onclick="validateCaptcha()">Submit</button>
-  <button onclick="generateCaptcha()">Refresh CAPTCHA</button>
-  
-  <p id="message"></p>
-
-          
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
   </div>
   
+  <!-- dropdown -->
   <div class="container" id="Dropdown">
   <div class="container"  id="earthquake">      
     <h2>
@@ -314,15 +322,16 @@ image-rendering: pixelated;
     </div>
   </div>
 
+
+  <!-- about us -->
   <div class="container">
    
      I am About
   </div>
   
-
+   <!-- footer -->
   <footer class="text-center text-white" style="background-color: #3f51b5">
      
-    <!-- <div class="container"> -->
         <div class="row text-center d-flex justify-content-center pt-5">
          
           <div class="col-md-2">
@@ -393,7 +402,9 @@ image-rendering: pixelated;
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+  
   // to validate phone no
   const phoneInput = document.getElementById('phone');
 
@@ -413,34 +424,6 @@ image-rendering: pixelated;
   });
 
 
-  //for captcha
-  let currentCaptcha = "";
 
-function generateCaptcha() {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No confusing chars like 0/O/1/I
-  let captcha = "";
-  for (let i = 0; i < 6; i++) {
-    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  currentCaptcha = captcha;
-  document.getElementById("captchaDisplay").textContent = captcha;
-  document.getElementById("message").textContent = "";
-  document.getElementById("captchaInput").value = "";
-}
-
-function validateCaptcha() {
-  const input = document.getElementById("captchaInput").value.trim().toUpperCase();
-  const message = document.getElementById("message");
-  if (input === currentCaptcha) {
-    message.textContent = "CAPTCHA verified!";
-    message.className = "success";
-  } else {
-    message.textContent = "Incorrect CAPTCHA. Try again.";
-    message.className = "error";
-  }
-}
-
-// Initialize on page load
-window.onload = generateCaptcha;
 </script>  
 </html>
