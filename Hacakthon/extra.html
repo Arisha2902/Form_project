@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple CAPTCHA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .captcha {
+      font-weight: bold;
+      font-size: 24px;
+      letter-spacing: 3px;
+      background-color: #e0e0e0;
+      padding: 10px;
+      display: inline-block;
+      user-select: none;
+      margin-bottom: 10px;
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 8px;
+    }
+    .success {
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple CAPTCHA Example</h2>
+  
+  <div class="captcha" id="captchaDisplay"></div>
+  <br>
+  
+  <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+  <button onclick="validateCaptcha()">Submit</button>
+  <button onclick="generateCaptcha()">Refresh CAPTCHA</button>
+  
+  <p id="message"></p>
+
+  <script>
+    let currentCaptcha = "";
+
+    function generateCaptcha() {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No confusing chars like 0/O/1/I
+      let captcha = "";
+      for (let i = 0; i < 6; i++) {
+        captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      currentCaptcha = captcha;
+      document.getElementById("captchaDisplay").textContent = captcha;
+      document.getElementById("message").textContent = "";
+      document.getElementById("captchaInput").value = "";
+    }
+
+    function validateCaptcha() {
+      const input = document.getElementById("captchaInput").value.trim().toUpperCase();
+      const message = document.getElementById("message");
+      if (input === currentCaptcha) {
+        message.textContent = "CAPTCHA verified!";
+        message.className = "success";
+      } else {
+        message.textContent = "Incorrect CAPTCHA. Try again.";
+        message.className = "error";
+      }
+    }
+
+    // Initialize on page load
+    window.onload = generateCaptcha;
+  </script>
+
+</body>
+</html>
