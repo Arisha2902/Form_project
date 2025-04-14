@@ -207,12 +207,12 @@ image-rendering: pixelated;
 
 
   <div class="container" id="form">
-    <form >
-      <label for="Name" class="col-sm-2 col-form-label">Name</label>
-      <input id="Name"  name="text" name="" placeholder="Enter Your Name">
+    <form action="/register" method="post">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <input id="name" name="name" placeholder="Enter Your Name" required>
       <br><br>
-      <label for="Email" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="name@example.com">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="name@example.com">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
       <br><br>
 
@@ -222,16 +222,16 @@ image-rendering: pixelated;
           <br><br>
           <label for="pincode" class="form-label">Pincode</label>
           <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter your area pincode" maxlength="6" pattern="[0-9]{6}" required>
-          <div class="form-text">Enter a 6-digit postal code.</div>
+          <!-- <div class="form-text">Enter a 6-digit postal code.</div> -->
           <br><br>
        
-  <div class="captcha" id="captchaDisplay"></div>
+  <!-- <div class="captcha" id="captchaDisplay"></div>
   <br>   
   <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
   <button onclick="validateCaptcha()">Submit</button>
   <button onclick="generateCaptcha()">Refresh CAPTCHA</button>
   
-  <p id="message"></p>
+  <p id="message"></p> -->
 
           
           <button type="submit" class="btn btn-primary">Submit</button>
@@ -298,7 +298,7 @@ image-rendering: pixelated;
             <li>Listen to the radio or television for information.</li>
             <li>Follow instructions given by public safety officials.</li>
             <li>onsider postponing outdoor activities.</li>
-            <li>If you must evacuate or are traveling during flooding, remember  the phrase “Turn Around, Don’t Drown!” Don’t drive through flooded roads. Cars can be swept away in only two feet of moving water. If your vehicle is trapped in rapidly moving water, stay in the vehicle. If the water is rising inside the vehicle, seek refuge on the roof.</li>
+            <li>If you must evacuate or are traveling during flooding, remember  the phrase "Turn Around, Don't Drown!" Don't drive through flooded roads. Cars can be swept away in only two feet of moving water. If your vehicle is trapped in rapidly moving water, stay in the vehicle. If the water is rising inside the vehicle, seek refuge on the roof.</li>
             <!-- <li>Flooding may have caused familiar places to change. Floodwaters often erode roads and walkways. Flood debris may hide animals and broken bottles, and it's also slippery. Avoid walking or driving through it.</li> -->
           </ul>
           <h3>
@@ -414,33 +414,33 @@ image-rendering: pixelated;
 
 
   //for captcha
-  let currentCaptcha = "";
+  // let currentCaptcha = "";
 
-function generateCaptcha() {
-  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No confusing chars like 0/O/1/I
-  let captcha = "";
-  for (let i = 0; i < 6; i++) {
-    captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  currentCaptcha = captcha;
-  document.getElementById("captchaDisplay").textContent = captcha;
-  document.getElementById("message").textContent = "";
-  document.getElementById("captchaInput").value = "";
-}
+  // function generateCaptcha() {
+  //   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // No confusing chars like 0/O/1/I
+  //   let captcha = "";
+  //   for (let i = 0; i < 6; i++) {
+  //     captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+  //   }
+  //   currentCaptcha = captcha;
+  //   document.getElementById("captchaDisplay").textContent = captcha;
+  //   document.getElementById("message").textContent = "";
+  //   document.getElementById("captchaInput").value = "";
+  // }
 
-function validateCaptcha() {
-  const input = document.getElementById("captchaInput").value.trim().toUpperCase();
-  const message = document.getElementById("message");
-  if (input === currentCaptcha) {
-    message.textContent = "CAPTCHA verified!";
-    message.className = "success";
-  } else {
-    message.textContent = "Incorrect CAPTCHA. Try again.";
-    message.className = "error";
-  }
-}
+  // function validateCaptcha() {
+  //   const input = document.getElementById("captchaInput").value.trim().toUpperCase();
+  //   const message = document.getElementById("message");
+  //   if (input === currentCaptcha) {
+  //     message.textContent = "CAPTCHA verified!";
+  //     message.className = "success";
+  //   } else {
+  //     message.textContent = "Incorrect CAPTCHA. Try again.";
+  //     message.className = "error";
+  //   }
+  // }
 
-// Initialize on page load
-window.onload = generateCaptcha;
+  // // Initialize on page load
+  // window.onload = generateCaptcha;
 </script>  
 </html>
