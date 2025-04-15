@@ -216,19 +216,15 @@ image-rendering: pixelated;
     background: #fe5f14 !important;
     color: white !important;
   }
- 
-    /* @media (max-width: 1230px) {
-  #part1,
-  #part2 {
-    float: none; /* Removes floating for better responsiveness */
-    width: 100%; /* Makes both elements take full width */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @media (max-width: 1230px) {
+  #part1 {
+    width: 100%;
   }
-} */
-
+  #part2 {
+    clear: both;
+    width: 100%;
+  }
+}
 </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
@@ -291,17 +287,17 @@ image-rendering: pixelated;
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./static/flood.jpg" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/1901/500" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="./static/earth.jpg" class="d-block w-100" alt="...">
+            <img src="https://picsum.photos/1900/500" class="d-block w-100" alt="...">
+
           </div>
           <div class="carousel-item">
-            <img src="./static/earth2.jpg" class="d-block w-100" alt="...">
+            <img src="https://picsum.photos/1902/500" class="d-block w-100" alt="...">
+
           </div>
-          <div class="carousel-item">
-            <img src="./static/storm.jpg" class="d-block w-100" alt="...">
-          </div>
+        
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -358,7 +354,7 @@ image-rendering: pixelated;
         </form>
     </div>
     <div id="part2">
-          <img id="img" src="./static/f2.jpg" alt="">
+          <img id="img" src="https://picsum.photos/1902/500" alt="">
     </div>
   </div>
 </div>
