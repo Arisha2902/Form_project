@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 12px;
 }
 
 
@@ -107,9 +106,9 @@
 
   }
   #or{
-    color: #fe5f14;
-    font-weight: 800;
-    font-size: 20px;
+    color: #fe5f14 !important;
+    /* font-weight: 800; */
+    /* font-size: 20px; */
   }
   #form{
     background: #f6f6f6;
@@ -127,7 +126,7 @@
     border: 2px solid #fe5f14;
     padding: 10px;
   }
-  #ae{
+  #af{
     float: left;
     width: 48%;
     background: #f6f6f6;
@@ -135,13 +134,16 @@
     padding: 10px;
 
   }
-  #de{
+  #dur{
     margin-top: 10px;
     clear: both;
   width: 100%;
   background: #fe5f14;
     padding: 10px;
 
+  }
+  #dur li{
+    color : wheat !important;
   }
   h1{
     margin-bottom: 1.25rem;
@@ -150,12 +152,17 @@
   h2{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: rgb(var(--black));
+    /* color: rgb(var(--black)); */
+    color: #fe5f14 !important;
     font-weight: 600;
+  }
+  h3{
+    color:white !important;
   }
   li{
     line-height: 1.5;
-    color: rgb(var(--black));
+    color: #ffc107 !important;
+    /* color: rgb(var(--black)); */
   }
   img{
     background-size: cover;
@@ -300,47 +307,56 @@ image-rendering: pixelated;
   <!-- dropdown -->
   <div class="container" id="Dropdown">
   <div class="container"  id="earthquake">  
-    <h2>
+    <h2 >
       What Should I Do Before, During, and After an <b>Earthquake </b> ?
       <hr style="color: #fe5f14; height: 10px; width: 100%; border-radius: 5px; margin-top: 0.5rem; margin-bottom: 0.5rem;">
   </h2>
-  <div id="be">  
+  <div id="be" ->  
 
-    <h3>
+    <h3 id="or">
       What to Do before an Earthquake ?
     </h3>
     <ul>
-      <li>Make sure you have a fire extinguisher, first aid kit, a battery-powered radio, a flashlight, and extra batteries at home.</li>
+      <!-- <li>Make sure you have a fire extinguisher, first aid kit, a battery-powered radio, a flashlight, and extra batteries at home.</li> -->
       <li>Learn first aid. </li>
       <li>Learn how to turn off the gas, water, and electricity.         </li>
       <li>Make up a plan of where to meet your family after an earthquake.        </li>
-      <li>Fix any defective electrical wiring and leakage in the gas connection to prevent the risk of fire. Also, tightly bolt your house's water heaters and LPG cylinders to the walls.</li>
-      <li>Anchor heavy furniture, cupboards, and appliances to the walls or floor and Learn the earthquake plan at your school or workplace</li>
+      <li>Don't leave heavy objects on shelves (they'll fall during a quake).</li>
+      <li>Learn the earthquake plan at your school or workplace.</li>
+      <!-- <li>Fix any defective electrical wiring and leakage in the gas connection to prevent the risk of fire. Also, tightly bolt your house's water heaters and LPG cylinders to the walls.</li> -->
+      <!-- <li>Anchor heavy furniture, cupboards, and appliances to the walls or floor and Learn the earthquake plan at your school or workplace</li> -->
     </ul>
   </div> 
-  <div id="ae"> 
-    <h3>
+  <div id="af" i> 
+    <h3 id="or">
       What to Do After an Earthquake ?
     </h3> 
     <ul>
-      <li>Check yourself and others for injuries. Provide first aid for anyone who needs it. </li>
-      <li>Be careful around broken glass and debris. Wear boots or sturdy shoes to keep from cutting your feet.</li>
-      <li>Turn on the radio. Don't use the phone unless it's an emergency.</li>
-      <li>Check water, gas, and electric lines for damage. If any are damaged, shut off the valves. Check for the smell of gas. If you smell it, open all the windows and doors, leave immediately, and report it to the authorities (use someone else's phone).</li>
       <li>Stay away from damaged areas.</li>
-      <li>If you're at school or work, follow the emergency plan or the instructions of the person in charge. Expect aftershocks.</li>
+
+      <!-- <li>Be careful around broken glass and debris. Wear boots or sturdy shoes to keep from cutting your feet.</li> -->
+      <li>Turn on the radio. Don't use the phone unless it's an emergency.</li>
+      <li>Be careful of chimneys (they may fall on you).</li>
+      <li>Be prepared for aftershocks – Aftershocks can be as strong as the original quake.</li>
+      <li>Check yourself and others for injuries. Provide first aid for anyone who needs it. </li>
+
+      <!-- <li>Stay away from beaches. Tsunamis and seiches sometimes hit after the ground has stopped shaking. -->
+      </li>
+      <!-- <li>Check water, gas, and electric lines for damage. If any are damaged, shut off the valves. Check for the smell of gas. If you smell it, open all the windows and doors, leave immediately, and report it to the authorities (use someone else's phone).</li> -->
     </ul>
   </div>    
-  <div id="de">  
+  <div id="dur">  
     <h3>
       What to Do During an Earthquake ?
     </h3>
     <ul>
-      <li><b>Stay calm!</b>  If you're indoors, stay inside. If you're outside, stay outside.        </li>        
-      <li>If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors. </li>
-      <li>If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings (stuff might fall off the building or the building could fall on you).</li>
-      <li>If you're in a car, stop the car and stay inside the car until the earthquake stops.        </li>
+      <li><b>Stay calm!</b>  If you're indoors, stay inside. If you're outside, stay outside.        </li>   
+      <li>Don't use matches, candles, or any flame. Broken gas lines and fire don't mix.</li>  
       <li>Don't use elevators (they may shut down).</li>
+      <li>If you're in a car, stop the car and stay inside the car until the earthquake stops.        </li>
+
+      <li>If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table).  </li>
+      <li>If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings.</li>
     </ul>
   </div> 
     
@@ -349,16 +365,36 @@ image-rendering: pixelated;
           <h2>
             What Should I Do Before, During, and After a <b>Flood </b> ?
         </h2>
-          <h3>
+        <div id="be">
+          <h3 id="or">
             What to Do before a Flood ?
           </h3>
           <ul>
+            <li>Prepare your home for flooding.</li>
+
             <li>Build an emergency kit and make a family communications plan.</li>
             <li>Avoid building in a floodplain unless you elevate and reinforce your home.</li>
-            <li>Prepare your home for flooding.</li>
-            <!-- <li>Consider installing "check valves" to prevent flood water from backing up into the drains of your home.</li> -->
-            <li>Make a plan for your household, including your pets, so that you and your family know what to do, where to go, and what you will need to protect yourselves from flooding.</li>
+            <li>Consider installing "check valves" to prevent flood water from backing up into  your home.</li>
+            <li>Protect your home by building smart and taking actions to minimize flood damage.</li>
+            <!-- <li>Make a plan for your household, including your pets, so that you and your family know what to do, where to go, and what you will need to protect yourselves from flooding.</li> -->
           </ul>
+        </div>
+        <div id="af">
+          <h3   id="or">
+            What to Do Dfter a Flood?
+          </h3>
+          <ul>
+            <li>Avoid moving water.</li>
+            <li>Return home only when authorities indicate it is safe.</li>
+            <li>Stay out of any building if it is surrounded by floodwaters.</li>
+            <li>Listen to news reports to learn whether the water supply is safe to drink.</li>
+            <li>Clean and disinfect everything that got wet. Mud left from floodwaters can contain sewage and chemicals.</li>
+            <!-- <li>Use extreme caution when entering buildings; there may be hidden damage, particularly in foundations.</li> -->
+            <!-- <li>Stay away from damaged areas unless your assistance has been specifically requested by police, fire, or relief organization.</li> -->
+            <!-- <li>Flooding may have caused familiar places to change. Floodwaters often erode roads and walkways. Flood debris may hide animals and broken bottles, and it's also slippery. Avoid walking or driving through it.</li> -->
+          </ul>
+        </div>
+        <div id="dur">
           <h3>
             What to Do During a Flood ?
           </h3>
@@ -366,19 +402,12 @@ image-rendering: pixelated;
             <li>Listen to the radio or television for information.</li>
             <li>Follow instructions given by public safety officials.</li>
             <li>onsider postponing outdoor activities.</li>
-            <li>If you must evacuate or are traveling during flooding, remember  the phrase “Turn Around, Don’t Drown!” Don’t drive through flooded roads. Cars can be swept away in only two feet of moving water. If your vehicle is trapped in rapidly moving water, stay in the vehicle. If the water is rising inside the vehicle, seek refuge on the roof.</li>
-            <!-- <li>Flooding may have caused familiar places to change. Floodwaters often erode roads and walkways. Flood debris may hide animals and broken bottles, and it's also slippery. Avoid walking or driving through it.</li> -->
-          </ul>
-          <h3>
-            What to Do Dfter a Flood?
-          </h3>
-          <ul>
-            <li>Avoid moving water.</li>
-            <li>Return home only when authorities indicate it is safe.</li>
-            <li>Stay out of any building if it is surrounded by floodwaters.</li>
-            <li>Stay away from damaged areas unless your assistance has been specifically requested by police, fire, or relief organization.</li>
+            <li>Secure your home. If you have time, bring in outdoor furniture. Move essential items to an upper floor.</li>
+            <!-- <li>If you must evacuate or are traveling during flooding, remember  the phrase “Turn Around, Don’t Drown!” Don’t drive through flooded roads. Cars can be swept away in only two feet of moving water. If your vehicle is trapped in rapidly moving water, stay in the vehicle. If the water is rising inside the vehicle, seek refuge on the roof.</li> -->
             <li>Flooding may have caused familiar places to change. Floodwaters often erode roads and walkways. Flood debris may hide animals and broken bottles, and it's also slippery. Avoid walking or driving through it.</li>
           </ul>
+        </div>
+
     </div>
   </div>
 
